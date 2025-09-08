@@ -4,57 +4,107 @@
   <title>Amparo Coneja's English Study Apps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-  background-color: #c9d6ff; /* Fallback solid color */
-  background-image: linear-gradient(135deg, #c9d6ff 0%, #e2e2e2 100%);
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-    h1 {
-      font-size: 2.5em;
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 40px;
-      color: #22223b;
+    @font-face {
+      font-family: 'Patrick Hand SC';
+      src: url('./Fonts/PatrickHandSC-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
     }
-    .menu-list {
-      list-style: none;
+    html, body {
+      height: 100%;
+      margin: 0;
       padding: 0;
     }
+    body {
+      background-color: #051f3f;
+      background-image: url('./images/placeholder.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      min-height: 100vh;
+      width: 100vw;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: -30px; /* Push up by 30px */
+    }
+    h1.hand-font {
+      font-family: 'Patrick Hand SC', Arial, sans-serif;
+      color: #fff;
+      font-size: 2.1em;
+      font-weight: bold;
+      margin-bottom: 40px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-shadow:
+        0 3px 16px #040f2c,
+        0 1px 1px #000;
+      line-height: 1.1;
+    }
+    ul.menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .menu-list li {
-      margin: 20px 0;
+      margin: 17px 0 0 0; /* Previously 20px. Now reduced by ~15% */
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .menu-list li:first-child {
+      margin-top: 0; /* Remove top margin from first button */
     }
     .menu-btn {
-      display: inline-block;
-      padding: 18px 45px;
-      font-size: 1.4em;
+      width: 100%;
+      max-width: 340px;
+      box-sizing: border-box;
+      padding: 18px 0;
+      font-size: 1.2em;
       font-weight: 600;
       text-decoration: none;
       color: #fff;
-      background: #5f6caf;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      background: #6474b6;
+      border: 2px solid #bcbec0; /* Subtle gray border */
+      border-radius: 14px;
+      box-shadow:
+        0 4px 18px 4px rgba(40,40,40,0.30), /* Stronger drop shadow */
+        0 1.5px 3px #25252544; /* Subtle hard edge shadow */
       transition: background 0.3s, transform 0.2s;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
+    .menu-btn:active,
     .menu-btn:hover {
       background: #364079;
-      transform: translateY(-2px) scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Amparo Coneja's English Study Apps</h1>
-  <ul class="menu-list">
-    <li><a class="menu-btn" href="Numbers-3/">Numbers-3</a></li>
-    <li><a class="menu-btn" href="https://amparoconeja2025.github.io/Unscramble_1/">Unscramble 1</a></li>
-  </ul>
+  <div class="container">
+    <h1 class="hand-font">Amparo Coneja</h1>
+    <ul class="menu-list">
+      <li><a class="menu-btn" href="Numbers-3/">Numbers-3</a></li>
+      <li><a class="menu-btn" href="https://amparoconeja2025.github.io/Unscramble_1/">Unscramble 1</a></li>
+    </ul>
+  </div>
 </body>
 </html>
